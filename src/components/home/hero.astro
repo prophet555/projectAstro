@@ -1,10 +1,29 @@
 ---
+// components
 import Link from "../ui/Link.astro";
 import Heading from "../ui/Heading.astro";
+
+// tools
+import { Image } from "astro:assets";
+
+// assets
+import mike from "@/assets/avatar.jpg";
 ---
 
-<div>
-  <Heading tagName="h3" size="h1">Hi, I'm Mike</Heading>
-  <Link href="#" variant="secondary">Download CV</Link>
-  <Link href="#contact">Let's Connect</Link>
-</div>
+<header aria-label="Intro to Mike" class="hero-home">
+  <Image 
+    src={mike}
+    alt="Mike H"
+    width = {200}
+    format="avif"
+    class="avatar"
+  />
+  <Heading tagName="h1" size="h2">Hi, I'm Mike</Heading>
+  <p>
+    Self taught developer and fund manager
+  </p>
+  <div>
+    <Link href="#" variant="secondary">Download CV</Link>
+    <Link href="#contact">Let's Connect</Link>
+  </div>
+</header>
